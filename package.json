@@ -8,7 +8,7 @@
   "main": "./lib/get-version.js",
   "scripts": {
     "cli-step-version": "node ./command.js",
-    "test": "mocha -R mocha-junit-reporter --reporter-options mochaFile=dist/lib/results.junit.xml lib/**/**.spec.js"
+    "test": "mocha --reporter spec lib/**/**.spec.js"
   },
   "author": "Bartlomiej Dubas",
   "license": "MIT",
