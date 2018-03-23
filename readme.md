@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/origami-network/node-cli-step-version.svg?branch=master)](https://travis-ci.org/origami-network/node-cli-step-version)
+[![Coverage Status](https://coveralls.io/repos/github/origami-network/node-cli-step-version/badge.svg?branch=feature%2Finitial-version)](https://coveralls.io/github/origami-network/node-cli-step-version?branch=feature%2Finitial-version)
+
 Get Version
 ==
 
