@@ -9,4 +9,5 @@ install:
 script:
   - npm run test:cover
 
-after_script: "npm run test:cover:publish"
+after_script:
+  - npm run test:cover:publish
