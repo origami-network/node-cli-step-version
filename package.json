@@ -1,0 +1,23 @@
+{
+  "name": "@origami-network/cli-step-version",
+  "version": "0.0.0",
+  "description": "Module that helps generate build and publish version.",
+  "bin": {
+    "cli-step-version": "./command.js"
+  },
+  "main": "./lib/get-version.js",
+  "scripts": {
+    "cli-step-version": "node ./command.js",
+    "test": "mocha -R mocha-junit-reporter --reporter-options mochaFile=dist/lib/results.junit.xml lib/**/**.spec.js"
+  },
+  "author": "Bartlomiej Dubas",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4",
+    "mocha-junit-reporter": "^1.17.0"
+  }
+}
