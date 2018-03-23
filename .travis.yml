@@ -8,6 +8,7 @@ install:
 
 script:
   - npm run test:cover
+  - npm run spec
 
 after_script:
   - npm run test:cover:publish
