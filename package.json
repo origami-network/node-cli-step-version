@@ -9,7 +9,8 @@
   "scripts": {
     "cli-step-version": "node ./command.js",
     "test": "mocha lib/**/**.spec.js",
-    "test:cover": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec lib/**/**.spec.js"
+    "test:cover": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec lib/**/**.spec.js",
+    "test:cover:publish": "cat dist/coverage/lcov.info | coveralls"
   },
   "author": "Bartlomiej Dubas",
   "license": "MIT",
