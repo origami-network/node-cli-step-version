@@ -11,7 +11,10 @@
     "test": "mocha -R mocha-junit-reporter --reporter-options mochaFile=dist/lib/results.junit.xml lib/**/**.spec.js"
   },
   "author": "Bartlomiej Dubas",
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "dependencies": {
     "commander": "^2.15.0"
   },
