@@ -2,18 +2,29 @@
   "name": "@origami-network/cli-step-version",
   "version": "0.0.0",
   "description": "Module that helps generate build and publish version.",
+  "author": "Bartlomiej Dubas",
+  "license": "MIT",
+
   "bin": {
     "cli-step-version": "./command.js"
   },
   "main": "./lib/get-version.js",
   "scripts": {
     "cli-step-version": "node ./command.js",
-    "test": "mocha lib/**/**.spec.js",
-    "test:cover": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec lib/**/**.spec.js",
-    "test:cover:publish": "cat dist/coverage/lcov.info | coveralls"
+    "test": "mocha --reporter spec lib/**/**.spec.js",
+    "test:cover": "nyc --report-dir dist/test -r lcov -r text npm run test",
+    "test:cover:publish": "cat dist/test/lcov.info | coveralls",
+    "spec": "mocha --reporter spec specs/**/**.spec.js"
   },
-  "author": "Bartlomiej Dubas",
-  "license": "MIT",
+
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "specs",
+      "dist"
+    ]
+  },
+
   "engines": {
     "node": ">=6.0.0"
   },
@@ -23,8 +34,8 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
-    "istanbul": "^0.4.5",
+    "fs-extra": "^5.0.0",
     "mocha": "^5.0.4",
-    "mocha-junit-reporter": "^1.17.0"
+    "nyc": "^11.6.0"
   }
 }
